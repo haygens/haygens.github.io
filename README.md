@@ -1,10 +1,9 @@
-[Home](#home) • [About Me](#about-me) • [Skills](#skills) • [Experience](#experience) • [Resume](#resume) • [Contact](#contact)
+[Home](#home) • [About Me](#about-me) • [Languages and Skills](#languages-and-skills) • [Experience](#experience) • [Resume](#resume) • [Contact](#contact)
 
 # Welcome to My Portfolio
 # Home
 
 Hello, my name is Haygen Siou. I’m a computer science student who likes learning things through experimentation. I’m currently building up my skills in programming, problem-solving, and software development. I enjoy learning new things and perfecting my skills through repetition and hard work.
-
 
 ---
 
@@ -61,4 +60,3 @@ My goals right now are pretty simple: keep improving at programming, build proje
 **Email:** Haygens@outlook.com 
 **LinkedIn:** https://www.linkedin.com/in/haygen-siou-511a5438b/ 
 **GitHub:** https://github.com/haygens
-
