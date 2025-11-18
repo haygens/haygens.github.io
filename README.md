@@ -1,4 +1,4 @@
-[Home](#home) • [About Me](#about-me) • [Languages and Skills](#languages-and-skills) • [Experience](#experience) • [Resume](#resume) • [Contact](#contact)
+[Home](#home) | [About Me](#about-me) | [Languages & Skills](#languages-and-skills) | [Experience](#experience) | [Resume](#resume) | [Contact](#contact)
 
 # Welcome to My Portfolio
 # Home
