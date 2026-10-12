@@ -1,388 +1,237 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haygen Siou - Portfolio</title>
+    <title>Haygen Siou | Portfolio README</title>
+
     <style>
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
-                Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
-        }
-
-        nav {
-            background: #2c3e50;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            padding: 0 1rem;
-        }
-
-        nav a {
-            color: #ecf0f1;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #3498db;
-        }
-
-        .container {
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
             max-width: 900px;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 40px 24px;
+            color: #333;
+            background-color: #f8f9fa;
         }
 
-        section {
-            background: white;
-            margin: 2rem 0;
-            padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        h1, h2 {
+            color: #222;
         }
 
         h1 {
-            color: #2c3e50;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 8px;
         }
 
         h2 {
-            color: #2c3e50;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 0.5rem;
+            margin-top: 32px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #ddd;
         }
 
-        h3 {
-            color: #34495e;
-            font-size: 1.3rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.8rem;
+        section {
+            margin-bottom: 28px;
         }
 
-        p {
-            margin-bottom: 1rem;
-            color: #555;
+        ul, ol {
+            padding-left: 28px;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 1.5rem;
+        li {
+            margin-bottom: 8px;
         }
 
-        .skill-category h3 {
-            margin-top: 0;
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin: 16px 0;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
         }
 
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        ul li {
-            padding: 0.4rem 0;
-            color: #555;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        ul li:before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: #3498db;
-            font-weight: bold;
-        }
-
-        .contact-info {
+        .skills {
             display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-            margin-top: 1rem;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+        .skill {
+            background-color: #e9ecef;
+            padding: 6px 12px;
+            border-radius: 5px;
+            font-size: 0.95rem;
         }
 
-        .contact-item strong {
-            color: #2c3e50;
-            min-width: 100px;
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #666;
         }
 
         a {
-            color: #3498db;
+            color: #2563eb;
             text-decoration: none;
-            transition: color 0.3s;
         }
 
         a:hover {
-            color: #2980b9;
             text-decoration: underline;
         }
 
-        .resume-link {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            margin-top: 1rem;
-            font-weight: 500;
-            transition: background 0.3s;
-        }
-
-        .resume-link:hover {
-            background: #2980b9;
-            text-decoration: none;
-        }
-
-        /* Artifact card styling */
-        .artifacts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 1.25rem;
-            margin-top: 1.5rem;
-        }
-
-        .artifact-card {
-            display: flex;
-            flex-direction: column;
-            background: #f8fafc;
-            border: 1px solid #e1e8ef;
-            border-radius: 8px;
-            padding: 1.25rem;
-        }
-
-        .artifact-card h3 {
-            margin-top: 0;
-            margin-bottom: 0.75rem;
-        }
-
-        .artifact-card p {
-            font-size: 0.95rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .artifact-number {
-            color: #3498db;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 0.4rem;
-        }
-
-        .artifact-placeholder {
-            display: inline-block;
-            align-self: flex-start;
-            background: #e8eef4;
-            color: #526273;
-            border-radius: 4px;
-            padding: 0.2rem 0.55rem;
-            font-size: 0.8rem;
-            margin-top: auto;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.6rem;
-            }
-
-            section {
-                padding: 1.5rem;
-            }
-
-            nav ul {
-                gap: 1rem;
+        @media (max-width: 600px) {
+            body {
+                padding: 24px 16px;
             }
         }
     </style>
 </head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about-me">About Me</a></li>
-            <li><a href="#skills">Languages &amp; Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#artifacts">Artifacts</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <div class="container">
-        <section id="home">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Hello, my name is <strong>Haygen Siou</strong>. I'm a computer science student who likes learning things through experimentation. I'm currently building up my skills in programming, problem solving, and software development. I enjoy learning new things and perfecting my skills through repetition and hard work.</p>
+<body>
+
+    <header>
+        <h1>Haygen Siou</h1>
+        <p>Computer Science Student | Personal Portfolio</p>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I'm a 22-year-old Computer Science student with a minor in
+                Social Research. I'm interested in software engineering,
+                backend development, and building technology that helps people.
+                I enjoy learning through experimentation, solving problems,
+                and continuously improving my skills.
+            </p>
         </section>
 
-        <section id="about-me">
-            <h2>About Me</h2>
-            <p>I'm a 21 year old CS student with an interest in software engineering and building things that can help people. What motivates me most is the process of learning.</p>
-
-            <p>Outside of school, I run a lot, mostly road, gravel, and trail. Running helps me stay disciplined and patient, which carries over into how I approach school and coding. I also enjoy music, singing, and playing instruments by ear. I tend to pick up new hobbies quickly and stick with them until I feel like I've really learned something.</p>
-
-            <p>My goals right now are pretty simple: keep improving at programming, build projects that actually reflect who I am, and eventually gain experience through internships or research opportunities.</p>
+        <section id="website-sections">
+            <h2>Website Sections</h2>
+            <ul>
+                <li><strong>About Me:</strong> A brief introduction to my background and interests.</li>
+                <li><strong>Experience:</strong> My academic background, skills, and relevant experience.</li>
+                <li><strong>Artifacts:</strong> Projects, coursework, and other work that demonstrates my development as a Computer Science student.</li>
+                <li><strong>Contact:</strong> Information for getting in touch with me.</li>
+            </ul>
         </section>
 
         <section id="skills">
-            <h2>Languages &amp; Skills</h2>
+            <h2>Technical Skills</h2>
 
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>C (beginner intermediate)</li>
-                        <li>HTML/CSS (basic)</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Tools &amp; Technologies</h3>
-                    <ul>
-                        <li>Git and GitHub</li>
-                        <li>IntelliJ IDEA</li>
-                        <li>VS Code</li>
-                        <li>GitHub Pages</li>
-                        <li>JUnit</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Other Skills</h3>
-                    <ul>
-                        <li>Problem-solving and logical reasoning</li>
-                        <li>Learning new tools quickly</li>
-                        <li>Clear written communication</li>
-                    </ul>
-                </div>
+            <h3>Programming Languages</h3>
+            <div class="skills">
+                <span class="skill">Java</span>
+                <span class="skill">Python</span>
+                <span class="skill">C</span>
+                <span class="skill">C++</span>
+                <span class="skill">C#</span>
+                <span class="skill">SQL</span>
+                <span class="skill">JavaScript</span>
             </div>
+
+            <h3>Technologies</h3>
+            <div class="skills">
+                <span class="skill">Node.js</span>
+                <span class="skill">.NET</span>
+                <span class="skill">PyTorch</span>
+                <span class="skill">TensorFlow</span>
+                <span class="skill">Kafka</span>
+                <span class="skill">Spark</span>
+                <span class="skill">Amazon S3</span>
+            </div>
+
+            <h3>Areas of Interest</h3>
+            <p>
+                Software Engineering, Backend Systems, Artificial Intelligence,
+                and Human-Centered Technology.
+            </p>
         </section>
 
-        <section id="experience">
-            <h2>Experience</h2>
-
-            <h3>Academic</h3>
-            <ul>
-                <li>Built multiple Java programs involving OOP design, class structure, inheritance, and JUnit tests</li>
-                <li>Worked with data and statistics across CS and non-CS courses, including interpreting real-world data</li>
-                <li>Regularly practice LeetCode problems to build foundational algorithms and confidence with problem-solving</li>
-            </ul>
-
-            <h3>Other</h3>
-            <ul>
-                <li>Long distance runner (5k, 10k, trail, and road). Running has taught me consistency and how to stay focused on long term goals</li>
-                <li>I've naturally helped others in classes understand concepts, especially math, logic, and code structure</li>
-            </ul>
-        </section>
-
-        <!-- Five artifact placeholders -->
         <section id="artifacts">
-            <h2>My Artifacts</h2>
-            <p>This section will showcase five artifacts I build throughout the quarter. Each card can be updated with the project title, link, and reflection when the artifact is complete.</p>
+            <h2>Projects &amp; Artifacts</h2>
+            <p>
+                This section will continue to grow as I complete new projects
+                and coursework.
+            </p>
 
-            <div class="artifacts-grid">
-                <article class="artifact-card">
-                    <span class="artifact-number">Artifact 1</span>
-                    <h3>Personal Portfolio Website</h3>
-                    <p>This portfolio introduces me and will serve as the home for my work throughout the quarter.</p>
-                    <p><strong>Link:</strong> <a href="#home">This website</a></p>
-                    <p><strong>Reflection:</strong> To be completed.</p>
-                    <span class="artifact-placeholder">In progress</span>
-                </article>
-
-                <article class="artifact-card">
-                    <span class="artifact-number">Artifact 2</span>
-                    <h3>Project Placeholder</h3>
-                    <p>Idea: A project or tool I would like to explore during the quarter.</p>
-                    <p><strong>Link:</strong> To be added.</p>
-                    <p><strong>Reflection:</strong> To be completed.</p>
-                    <span class="artifact-placeholder">Placeholder</span>
-                </article>
-
-                <article class="artifact-card">
-                    <span class="artifact-number">Artifact 3</span>
-                    <h3>Project Placeholder</h3>
-                    <p>Idea: An opportunity to experiment with a new concept, technique, or technology.</p>
-                    <p><strong>Link:</strong> To be added.</p>
-                    <p><strong>Reflection:</strong> To be completed.</p>
-                    <span class="artifact-placeholder">Placeholder</span>
-                </article>
-
-                <article class="artifact-card">
-                    <span class="artifact-number">Artifact 4</span>
-                    <h3>Project Placeholder</h3>
-                    <p>Idea: A useful project that explores a problem I would like to solve.</p>
-                    <p><strong>Link:</strong> To be added.</p>
-                    <p><strong>Reflection:</strong> To be completed.</p>
-                    <span class="artifact-placeholder">Placeholder</span>
-                </article>
-
-                <article class="artifact-card">
-                    <span class="artifact-number">Artifact 5</span>
-                    <h3>Project Placeholder</h3>
-                    <p>Idea: A final project that builds on the skills and ideas I develop this quarter.</p>
-                    <p><strong>Link:</strong> To be added.</p>
-                    <p><strong>Reflection:</strong> To be completed.</p>
-                    <span class="artifact-placeholder">Placeholder</span>
-                </article>
+            <div class="card">
+                <h3>Artifact 1</h3>
+                <p>Project description coming soon.</p>
             </div>
+
+            <div class="card">
+                <h3>Artifact 2</h3>
+                <p>Project description coming soon.</p>
+            </div>
+
+            <div class="card">
+                <h3>Artifact 3</h3>
+                <p>Project description coming soon.</p>
+            </div>
+
+            <div class="card">
+                <h3>Artifact 4</h3>
+                <p>Project description coming soon.</p>
+            </div>
+
+            <div class="card">
+                <h3>Artifact 5</h3>
+                <p>Project description coming soon.</p>
+            </div>
+        </section>
+
+        <section id="running-the-website">
+            <h2>Running the Website</h2>
+            <p>
+                This portfolio is built using HTML and CSS.
+            </p>
+            <ol>
+                <li>Clone or download the repository.</li>
+                <li>Open <code>index.html</code> in a web browser.</li>
+                <li>
+                    Alternatively, visit the live website through GitHub Pages,
+                    if enabled.
+                </li>
+            </ol>
+        </section>
+
+        <section id="future-improvements">
+            <h2>Future Improvements</h2>
+            <ul>
+                <li>Add completed projects and coursework to the Artifacts section.</li>
+                <li>Expand project descriptions and include links to source code.</li>
+                <li>Continue refining the design and accessibility of the website.</li>
+                <li>Update experience and technical skills as I gain experience.</li>
+            </ul>
         </section>
 
         <section id="contact">
-            <h2>Contact &amp; Resume</h2>
-
-            <div class="contact-info">
-                <div class="contact-item">
-                    <strong>Email:</strong>
-                    <a href="mailto:Haygens@outlook.com">Haygens@outlook.com</a>
-                </div>
-                <div class="contact-item">
-                    <strong>LinkedIn:</strong>
-                    <a href="https://www.linkedin.com/in/haygen-siou-511a5438b/" target="_blank" rel="noopener noreferrer">linkedin.com/in/haygen-siou</a>
-                </div>
-                <div class="contact-item">
-                    <strong>GitHub:</strong>
-                    <a href="https://github.com/haygens" target="_blank" rel="noopener noreferrer">github.com/haygens</a>
-                </div>
-            </div>
-
-            <a href="https://github.com/user-attachments/files/23597679/Haygen_resume_1.pdf" class="resume-link" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a>
+            <h2>Contact</h2>
+            <p>
+                Please visit the Contact section of my portfolio to learn
+                how to reach me.
+            </p>
         </section>
-    </div>
+    </main>
+
+    <footer>
+        <p>Thanks for visiting my portfolio!</p>
+        <p>&copy; 2026 Haygen Siou</p>
+    </footer>
+
 </body>
 </html>
