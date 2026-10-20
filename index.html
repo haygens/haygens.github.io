@@ -397,24 +397,29 @@
                         <p>
                             An extension of my Run Tracker where Claude (run
                             headless with claude -p) writes a week-by-week race
-                            training plan from my recent running history.
+                            training plan from my recent running history. I can
+                            check a goal and generate a plan right from the
+                            app's page, or from PowerShell.
                         </p>
                         <p>
                             <strong>Reflection:</strong> The key decision was
                             splitting the work: plain code calculates my
                             baseline, decides whether the goal is realistic, and
-                            checks every plan against safety rules, while the
+                            checks every plan against 9 safety rules, while the
                             model only writes the plan. That split made problems
                             easy to trace. My validator caught bad plans in 13
-                            hand-made tests, and the real plan passed all 9
-                            rules. Testing also showed that my own rules, not
-                            the model, capped the long run at about 19 km, which
-                            is too conservative for a marathon. I learned that a
+                            hand-made tests, and real plans passed every rule.
+                            Testing also showed that my own rules, not the
+                            model, capped the long run at about 19 km, which is
+                            too conservative for a marathon. Moving it onto the
+                            page meant password-protecting generation so no one
+                            else could use my Claude allowance. I learned that a
                             model's output is only as useful as the checks
                             around it.
                         </p>
                         <div class="skills">
                             <span class="skill">Node.js</span>
+                            <span class="skill">Express</span>
                             <span class="skill">Claude Code (claude -p)</span>
                             <span class="skill">SQLite</span>
                             <span class="skill">JavaScript</span>
