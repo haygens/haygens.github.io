@@ -393,14 +393,38 @@
 
                     <article class="card">
                         <span class="artifact-number">ARTIFACT 03</span>
-                        <h3>Project Three</h3>
+                        <h3>Run Tracker: AI Training Plans</h3>
                         <p>
-                            A placeholder for an assignment, application,
-                            or technical project.
+                            An extension of my Run Tracker where Claude (run
+                            headless with claude -p) writes a week-by-week race
+                            training plan from my recent running history.
                         </p>
-                        <div class="artifact-placeholder">
-                            Project details coming soon
+                        <p>
+                            <strong>Reflection:</strong> The key decision was
+                            splitting the work: plain code calculates my
+                            baseline, decides whether the goal is realistic, and
+                            checks every plan against safety rules, while the
+                            model only writes the plan. That split made problems
+                            easy to trace. My validator caught bad plans in 13
+                            hand-made tests, and the real plan passed all 9
+                            rules. Testing also showed that my own rules, not
+                            the model, capped the long run at about 19 km, which
+                            is too conservative for a marathon. I learned that a
+                            model's output is only as useful as the checks
+                            around it.
+                        </p>
+                        <div class="skills">
+                            <span class="skill">Node.js</span>
+                            <span class="skill">Claude Code (claude -p)</span>
+                            <span class="skill">SQLite</span>
+                            <span class="skill">JavaScript</span>
                         </div>
+                        <p>
+                            <a class="contact-link"
+                               href="https://github.com/haygens/run-tracker"
+                               target="_blank"
+                               rel="noopener noreferrer">View on GitHub</a>
+                        </p>
                     </article>
 
                     <article class="card">
